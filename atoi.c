@@ -59,5 +59,5 @@ return (sign * result);
  */
 int is_interactive(itr_r *itr)
 {
-return (isatty(STDIN_FILENO) && itr.readfd <= 2);
+return (isatty(STDIN_FILENO) && itr->readfd <= 2);
 }

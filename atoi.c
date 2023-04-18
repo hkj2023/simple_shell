@@ -48,7 +48,7 @@ i++;
 }
 for (; c[i] != '\0'; i++)
 result = result * 10 + c[i] - '0');
-return (sign * result);
+return (sign *result);
 }
 
 

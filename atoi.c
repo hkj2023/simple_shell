@@ -53,11 +53,13 @@ return (sign *result);
 
 
 /**
- * is_interactive - returns true if shell is interactive
+ * is_interactive - to returns if shell is interactive
  * @itr: struct
  * Return: 1 or 1
  */
 int is_interactive(itr_r *itr)
 {
-return (isatty(STDIN_FILENO) && itr->readfd <= 2);
+	int attractive;
+	attractive = isatty((STDN_FILENO) && itr->readfd <= 2);
+	return (attractive);
 }

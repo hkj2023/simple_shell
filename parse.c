@@ -4,8 +4,8 @@
 /**
  * is_cmd - executable file
  * @itr: user defined typedef
- * @path: path 
-  * Return: 1 if true, 0 if false
+ * @path: path
+ * Return: 1 if true, 0 if false
  */
 int is_cmd(itr_r *itr, char *path)
 {

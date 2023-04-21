@@ -24,8 +24,9 @@
 #define USE_GETLINE 0
 #define USE_STRTOK 0
 
-#define HIST_FILE	".simple_shell_history"
-#define HIST_MAX	4096 extern char **environ;
+#define HIST_FILE ".simple_shell_history"
+#define HIST_MAX 4096
+extern char **environ;
 
 
 /**
@@ -70,7 +71,7 @@ typedef struct sendmessages
 	int argc;
 	unsigned int line_count;
 	int err_num;
-	int count_line;
+	int linecount_flag;
 	char *fname;
 	list_t *env;
 	list_t *history;
@@ -78,7 +79,7 @@ typedef struct sendmessages
 	char **environ;
 	int env_changed;
 	int status;
-	char **cmd_buf; 
+	char **cmd_buf;
 	int cmd_buf_type;
 	int readfd;
 	int histcount;

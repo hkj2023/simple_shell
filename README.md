@@ -1,6 +1,7 @@
 0x16. C - Simple Shell
 
 Done by Desalegn Gurmu and Diriba Gonfa
+Date: final date is 26/04/2023
 Tasks
 
 0. Betty would be proud

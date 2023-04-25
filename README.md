@@ -31,7 +31,7 @@ fork must not be called if the command doesn’t exist
   - Write your own getline function
   - Use a buffer to read many chars at once and call the least possible the read system call
   - You will need to use static variables
-  - You are not allowed to use getline 
+  - You are not allowed to use getline
   - You don’t have to:be able to move the cursor
 7. Simple shell 0.2.1
    - Simple shell 0.2 +

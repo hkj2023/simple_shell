@@ -1,5 +1,6 @@
 0x16. C - Simple Shell
 
+Done by Desalegn Gurmu and Diriba Gonfa
 Tasks
 
 0. Betty would be proud

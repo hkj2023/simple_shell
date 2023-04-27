@@ -152,11 +152,7 @@ return (n);
 */
 void sigintHandler(__attribute__((unused))int n)
 {
-while (1)
-{
+_puts("\n");
 _puts("$ ");
-_puts("Blinking\n");
-sleep(1);
-}
-return;
+_putchar(BUF_FLUSH);
 }

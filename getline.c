@@ -17,7 +17,7 @@ static char *ch;
 char **bufer = &(itr->arg), *p;
 _putchar(BUF_FLUSH);
 r = _input_buf(itr, &ch, &len);
-if (r < 0)
+if (r == -1)
 return (-1);
 if (len)
 {
@@ -63,8 +63,7 @@ p = *ptr;
 if (p && length)
 s = *length;
 if (i == len)
-i = 0;
-len = 0;
+i = len = 0;
 r = read_buf(itr, buf, &len);
 if (r == -1 || (r == 0 && len == 0))
 return (-1);

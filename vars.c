@@ -22,9 +22,9 @@ buf[j] = 0;
 j++;
 itr->cmd_buf_type = CMD_AND;
 }
-else if (buf[j] == ';') /* found end of this command */
+else if (buf[j] == ';')
 {
-buf[j] = 0; /* replace semicolon with null */
+buf[j] = 0;
 itr->cmd_buf_type = CMD_CHAIN;
 }
 else

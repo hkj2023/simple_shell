@@ -12,24 +12,24 @@ ssize_t r = 0;
 int builtin_ret = 0;
 while (r != -1 && builtin_ret != -2)
 {
-clear_itr(itr);
+clear_info(itr);
 if (is_interactive(itr))
 _puts("$ ");
 _eputchar(BUF_FLUSH);
 r = get_input(itr);
 if (r != -1)
 {
-set_itr(itr, av);
+set_info(itr, av);
 builtin_ret = find_builtin(itr);
 if (builtin_ret == -1)
 find_cmd(itr);
 }
 else if (is_interactive(itr))
 _putchar('\n');
-free_itr(itr, 0);
+free_info(itr, 0);
 }
 write_history(itr);
-free_itr(itr, 1);
+free_info(itr, 1);
 if (!is_interactive(itr) && itr->status)
 exit(itr->status);
 if (builtin_ret == -2)
@@ -125,9 +125,9 @@ return;
 }
 if (child_pid == 0)
 {
-if (execve(itr->path, itr->argv, get_environ(itr)) == -1)
+if (execve(itr->path, itr->argv, get_environ(itr)) == -1
 {
-free_itr(itr, 1);
+free_info(itr, 1);
 if (errno == EACCES)
 exit(126);
 exit(1);
@@ -140,8 +140,7 @@ if (WIFEXITED(itr->status))
 {
 itr->status = WEXITSTATUS(itr->status);
 if (itr->status == 126)
-print_error(itr, "Permission denied\n");
+print_error(itr, "Access denied\n");
 }
 }
 }
-

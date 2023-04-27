@@ -35,7 +35,7 @@ for (k = 0, i = start; i < stop; i++)
 if (pathstr[i] != ':')
 buf[k++] = pathstr[i];
 buf[k] = 0;
-return (void*)buf;
+return ((void *)buf);
 }
 
 /**

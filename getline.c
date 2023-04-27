@@ -94,9 +94,8 @@ return (s);
 
 ssize_t _input_buf(itr_r *itr, char **buf, size_t *len)
 {
-ssize_t siz;
+ssize_t siz = 0;
 size_t length = 0;
-siz = 0;
 if (!*len)
 {
 

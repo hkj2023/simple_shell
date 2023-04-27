@@ -54,8 +54,8 @@ return (r);
  */
 int _getline(itr_r *itr, char **ptr, size_t *length)
 {
-char buf[READ_BUF_SIZE];
-size_t i = 0, len = 0;
+static char buf[READ_BUF_SIZE];
+size_t i, len;
 size_t k;
 ssize_t r = 0, s = 0;
 char *p = NULL, *pp = NULL, *c;
@@ -115,7 +115,7 @@ if ((*buf)[siz - 1] == '\n')
 (*buf)[siz - 1] = '\0';
 siz--;
 }
-(*itr).line_count = 1;
+itr->line_count = 1;
 remove_comments(*buf);
 build_history_list(itr, *buf, itr->histcount++);
 {

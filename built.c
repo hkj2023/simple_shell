@@ -4,7 +4,6 @@
  * _myexit - to exit
  * @itr: user defined struct
  * Return: Always 0 (Success)
- * (0) if info.argv[0] != "exit"
  */
 int _myexit(itr_r *itr)
 {

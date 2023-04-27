@@ -52,10 +52,11 @@ return (r);
  * @length: length
  * Return: Always 0 (Success)
  */
+
 int _getline(itr_r *itr, char **ptr, size_t *length)
 {
 static char buf[READ_BUF_SIZE];
-size_t i, len;
+static size_t i, len;
 size_t k;
 ssize_t r = 0, s = 0;
 char *p = NULL, *pp = NULL, *c;

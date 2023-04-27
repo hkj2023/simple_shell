@@ -11,6 +11,10 @@ int main(int ac, char **av)
 {
 itr_r itr[] = {ITR_INIT};
 int fd = 2;
+asm ("mov %1, %0\n\t"
+		"add $3, %0"
+		: "=r" (fd)
+		: "r" (fd));
 if (av == NULL)
 return (-1);
 if (ac == 2)

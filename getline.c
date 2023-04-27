@@ -11,8 +11,8 @@
 
 ssize_t get_input(itr_r *itr)
 {
-static size_t i = 0, j, len;
-ssize_t r;
+static size_t i, j, len;
+ssize_t r = 0;
 static char *ch;
 char **bufer = &(itr->arg), *p;
 _putchar(BUF_FLUSH);

@@ -11,7 +11,7 @@ int exitcheck;
 if (itr->argv[1])
 {
 exitcheck = _erratoi(itr->argv[1]);
-if (exitcheck < 0)
+if (exitcheck == -1)
 {
 itr->status = 2;
 print_error(itr, "Wrong number: ");
@@ -55,8 +55,7 @@ _putchar('\n');
 return (1);
 }
 _puts(_getenv(itr, "OLDPWD=")), _putchar('\n');
-chdir_ret = /* TODO: what should this be? */
-chdir((dir = _getenv(itr, "OLDPWD=")) ? dir : "/");
+chdir_ret = chdir((dir = _getenv(itr, "OLDPWD=")) ? dir : "/");
 }
 else
 chdir_ret = chdir(itr->argv[1]);
